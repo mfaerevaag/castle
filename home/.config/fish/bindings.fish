@@ -1,4 +1,7 @@
-function _git_status
+# .dotfile
+# fish - bindings
+
+function _bind_git_status -d "Git status current directory"
   echo ''
   if git status > /dev/null ^ /dev/null
     git status
@@ -8,6 +11,14 @@ function _git_status
     set_color normal
   end
   commandline -f repaint
+end
+
+function _bind_grep -d "Grep current command"
+  set -l cmd grep
+
+  if commandline -j|grep -v "$cmd *\$" >/dev/null
+    commandline -aj " | $cmd;"
+  end
 end
 
 function reload!
@@ -21,7 +32,8 @@ function reload!
 end
 
 function fish_user_key_bindings
-  bind \er reload!
-  bind \el 'echo ''; ll; commandline -f repaint;'
-  bind \ek _git_status
+  bind \er reload! # reload config
+  bind \el 'echo ''; ll; commandline -f repaint;' # ls -l
+  bind \eg _bind_grep # grep
+  bind \ek _bind_git_status # git status
 end

@@ -1,9 +1,9 @@
-function wd -d 'warp directory'
-  set output (_wd $argv)
-  set ret $status
+# .dotfile
+# fish - wd wrapper function
 
-  if [ $ret -eq 0 ]
-    cd "$output"
+function wd -d 'warp directory'
+  if set output (_wd $argv)
+    cd $output
   else
     for line in $output
       echo $line

@@ -1,3 +1,6 @@
+# .dotfile
+# fish - greeting
+
 # http://sourceforge.net/p/fish/mailman/fish-users/thread/516BDE58.6080307@gmail.com/
 # https://gist.githubusercontent.com/siteshwar/5472791/raw/79ea0c34ca548ee047bc4b9f304621439b3546d7/Greeting+with+Fish+Logo
 function fish_greeting -d "What's up, fish?"

@@ -1,3 +1,4 @@
+# .dotfile
 # fish config
 
 # variables
@@ -8,6 +9,9 @@ source $FISH/theme.fish
 
 # greeting
 source $FISH/greeting.fish
+
+# aliases
+source $FISH/aliases.fish
 
 # bindings
 source $FISH/bindings.fish
