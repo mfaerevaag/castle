@@ -1,12 +1,15 @@
-" URL: http://vim.wikia.com/wiki/Example_vimrc
-" Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-" Description: A minimal, but feature rich, example .vimrc. If you are a
-"              newbie, basing your first .vimrc on this file is a good choice.
-"              If you're a more advanced user, building your own .vimrc based
-"              on this file is still a good idea.
+" dotfile
+" ~/.vimrc
+
 
 "------------------------------------------------------------
-" Features {{{1
+" Pathogen
+"
+execute pathogen#infect()
+
+
+"------------------------------------------------------------
+" Features
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
@@ -25,7 +28,7 @@ syntax on
 
 
 "------------------------------------------------------------
-" Must have options {{{1
+" Must have options
 "
 " These are highly recommended options.
 
@@ -58,7 +61,7 @@ set hlsearch
 
 
 "------------------------------------------------------------
-" Usability options {{{1
+" Usability options
 "
 " These are options that users frequently set in their .vimrc. Some of them
 " change Vim's behaviour in ways which deviate from the true Vi way, but
@@ -79,7 +82,7 @@ set autoindent
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
-set nostartofline
+"set nostartofline
 
 " Display the cursor position on the last line of the screen or in the status
 " line of a window
@@ -118,14 +121,14 @@ set pastetoggle=<F11>
 
 
 "------------------------------------------------------------
-" Indentation options {{{1
+" Indentation options
 "
 " Indentation settings according to personal preference.
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
@@ -135,7 +138,7 @@ set expandtab
 
 
 "------------------------------------------------------------
-" Mappings {{{1
+" Mappings
 "
 " Useful mappings
 
@@ -147,5 +150,23 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" Exit insert mode with jj
+ino jj <esc>
+cno jj <c-c>
+" Toggle visual mode with v
+vno v <esc>
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" NERDTree
+nnoremap <C-e> :NERDTreeToggle<CR>
 
 "------------------------------------------------------------
+" Plugins
+
+" Powerline
+" python from powerline.bindings.vim import source_plugin; source_plugin()
+source /usr/lib/python3.4/site-packages/powerline/bindings/vim/plugin/powerline.vim
+

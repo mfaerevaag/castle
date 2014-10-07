@@ -39,8 +39,7 @@ asus-kbd-backlight 1
 SpiderOak &
 
 # wallpaper
-#feh --bg-scale ~/Pictures/Bakgrunn/arch_linux_bw_wallpaper_by_thales.png
-feh --bg-scale ~/Pictures/Bakgrunn/arch_kiss.png
+feh --bg-scale ~/Pictures/wallpaper/arch_kiss.png
 
 
 # window manager

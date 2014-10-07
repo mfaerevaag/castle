@@ -18,7 +18,8 @@ URxvt.lineSpace:            0
 
 !! Fonts
 !URxvt.allow_bold:          true
-urxvt.font:                 xft:DejaVu Sans Mono:style=Book:antialias=false:size=10, \
+urxvt.font:                 xft:DejaVu Sans Mono For Powerline:style=Book:antialias=false:size=10, \
+                            xft:DejaVu Sans Mono:style=Book:antialias=false:size=10, \
                             xft:Source Code Pro:size=10, \
                             xft:FreeSerif:style=Regular, \
                             xft:unifont:style=Medium:antialias=false

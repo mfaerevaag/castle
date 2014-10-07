@@ -25,10 +25,12 @@ if uname -a | grep "Darwin"
 
 # Linux
 else
-  set -U fish_user_paths /usr/lib/node_modules # node
-  set -U fish_user_paths $HOME/.cabal/bin # cabal
-  set -U fish_user_paths (ruby -rubygems -e "puts Gem.user_dir")/bin # ruby
+  set -U fish_user_paths $fish_user_paths /usr/lib/node_modules # node
+  set -U fish_user_paths $fish_user_paths $HOME/.cabal/bin # cabal
+  set -U fish_user_paths $fish_user_paths (ruby -rubygems -e "puts Gem.user_dir")/bin # ruby
+  set -U PYTHONPATH /usr/lib/python3.3/site-packages # python
 end
+
 
 set -U fish_user_paths $fish_user_paths $HOME/bin
 set -U fish_user_paths $fish_user_paths /usr/local/bin
