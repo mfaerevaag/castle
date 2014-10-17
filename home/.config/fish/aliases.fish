@@ -26,3 +26,6 @@ end
 function wicon
   sudo netctl start $argv
 end
+
+set wicon_args (netctl list | sed 's/[ *]//g')
+complete -c wicon -xa "$wicon_args"
