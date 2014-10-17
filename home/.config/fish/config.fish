@@ -5,7 +5,8 @@
 set -U FISH (dirname (status -f))
 
 # theme
-source $FISH/theme.fish
+source $FISH/themes/robby-russel.fish
+#source $FISH/themes/bobthefish/fish_prompt.fish
 
 # greeting
 source $FISH/greeting.fish
