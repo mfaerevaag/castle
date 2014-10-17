@@ -5,7 +5,7 @@
 "------------------------------------------------------------
 " Pathogen
 "
-execute pathogen#infect()
+call pathogen#infect()
 
 
 "------------------------------------------------------------
@@ -142,6 +142,12 @@ set expandtab
 "
 " Useful mappings
 
+" Open ~/.vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default
 map Y y$
@@ -163,8 +169,15 @@ let g:ctrlp_cmd = 'CtrlP'
 " NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
 
+
 "------------------------------------------------------------
 " Plugins
+
+" CtrlP
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|swm|dll)$',
+  \ }
 
 " Powerline
 " python from powerline.bindings.vim import source_plugin; source_plugin()
