@@ -3,18 +3,12 @@
 # .dotfile
 # ~/.zshrc
 
-# shortcut to this dotfiles path
 export DOT=$HOME/.config/zsh
+export CODE=$HOME/Dev/code
 
 # your project folder that we can `c [tab]` to
-#export PROJECTS=$HOME/Dev/code
-
-# use .localrc for SUPER SECRET CRAP that you don't
-# want in your public, versioned repo.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
+c() { cd $CODE/$1; }
+compctl -W $CODE/ -/ c
 
 # all of our zsh files
 typeset -U config_files

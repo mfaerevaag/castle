@@ -18,6 +18,9 @@ autoload -U $DOT/functions/*(:t)
 # HISTSIZE=10000
 # SAVEHIST=10000
 
+unsetopt autonamedirs # named directores
+setopt nobeep
+unsetopt autocd
 # setopt NO_BG_NICE # don't nice background tasks
 # setopt NO_HUP
 # setopt NO_LIST_BEEP
