@@ -271,7 +271,17 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Unknown"; user_name = "markus"; nick = "markus"; };
-  "fe-text" = { actlist_sort = "refnum"; };
+  core = {
+    real_name = "Unknown";
+    user_name = "markus";
+    nick = "markus";
+  };
+  "fe-text" = {
+    actlist_sort = "refnum";
+  };
+  "fe-common/core" = {
+    theme = "themes/solarized";
+    hilight_color = "= %R";
+  };
 };
 ignores = ( { level = "JOINS PARTS QUITS"; } );
