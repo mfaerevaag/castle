@@ -21,4 +21,4 @@ set postponed ="+[Google Mail]/Drafts"
 # set any_label = "+[Google Mail]/any_label"
 
 # SIGN
-set signature="~/.mutt/signature.google"
+set signature="~/.mutt/signature.faerevaag"
