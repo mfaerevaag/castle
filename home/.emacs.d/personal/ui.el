@@ -6,7 +6,7 @@
 (set-mouse-color "dark orange")
 
 ;; theme
-(load-theme 'wombat t)
+;; (load-theme 'wombat t)
 
 ;; hl-line
 (set-face-attribute hl-line-face nil :underline nil)
