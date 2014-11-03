@@ -16,16 +16,3 @@ end
 function y
   yaourt $argv
 end
-
-# wifi
-function wires
-  sudo ip link set wlan0 down
-  sudo netctl stop-all
-end
-
-function wicon
-  sudo netctl start $argv
-end
-
-set wicon_args (netctl list | sed 's/[ *]//g')
-complete -c wicon -xa "$wicon_args"
