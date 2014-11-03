@@ -18,20 +18,13 @@ source $FISH/aliases.fish
 source $FISH/bindings.fish
 
 # PATH
-# set MANPATH $MANPATH "/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-# Mac OS X
-if uname -a | grep "Darwin"
-  set -U fish_user_paths $HOME/.cabal/bin # cabal
+# python
+set -U PYTHONPATH /usr/lib/python3.3/site-packages
 
-# Linux
-else
-  set -U fish_user_paths $fish_user_paths /usr/lib/node_modules # node
-  set -U fish_user_paths $fish_user_paths $HOME/.cabal/bin # cabal
-  set -U fish_user_paths $fish_user_paths (ruby -rubygems -e "puts Gem.user_dir")/bin # ruby
-  set -U PYTHONPATH /usr/lib/python3.3/site-packages # python
-end
-
-
-set -U fish_user_paths $fish_user_paths $HOME/bin
-set -U fish_user_paths $fish_user_paths /usr/local/bin
+set -U fish_user_paths $fish_user_paths \
+    $HOME/bin \
+    /usr/local/bin \
+    /usr/lib/node_modules \
+    $HOME/.cabal/bin \
+    (ruby -rubygems -e "puts Gem.user_dir")/bin
