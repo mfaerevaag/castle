@@ -61,6 +61,11 @@
 (load "personal-tramp")
 ;; (require 'personal-plugin-tramp)
 
+;; r
+(add-to-list 'auto-mode-alist '("\\.R\\'" . R-mode))
+(add-hook 'R-mode-hook 'auto-complete-mode)
+(add-hook 'R-mode-hook 'smartparens-mode)
+
 ;; c
 (setq c-default-style "linux"
       c-basic-offset 4)
