@@ -118,6 +118,9 @@
      (require 'tern-auto-complete)
      (tern-ac-setup)))
 
+;; typescript
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
 ;; coffee
 (add-hook 'coffee-mode-hook 'auto-complete-mode)
 (custom-set-variables
