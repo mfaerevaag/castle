@@ -31,8 +31,8 @@ xautolock -time 10 -locker slock &
 xflux -l 55.43 -g 12.26 -k 3500 &
 
 # asus
-sudo asus-kbd-backlight allowusers
-asus-kbd-backlight 1
+# sudo asus-kbd-backlight allowusers
+# asus-kbd-backlight 1
 
 # other services/daemons
 #dropboxd &
