@@ -36,6 +36,7 @@ xflux -l 55.43 -g 12.26 -k 3500 &
 
 # other services/daemons
 #dropboxd &
+nm-applet &
 SpiderOak &
 
 # wallpaper
