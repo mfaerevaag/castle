@@ -18,13 +18,5 @@ source $FISH/aliases.fish
 source $FISH/bindings.fish
 
 # PATH
-
-# python
-set -U PYTHONPATH /usr/lib/python3.3/site-packages
-
-set -U fish_user_paths $fish_user_paths \
-    $HOME/bin \
-    /usr/local/bin \
-    /usr/lib/node_modules \
-    $HOME/.cabal/bin \
-    (ruby -rubygems -e "puts Gem.user_dir")/bin
+set PYTHONPATH /usr/lib/python3.3/site-packages # python
+set PATH $HOME/bin /usr/local/bin /usr/lib/node_modules $HOME/.cabal/bin (ruby -rubygems -e "puts Gem.user_dir")/bin $PATH
