@@ -15,7 +15,7 @@
 (setq evil-shift-width 4)
 (setq evil-auto-indent t)
 ;; disable key-chort-mode in evilmode
-(when (boundp 'evil-mode)
+(when 'personal-evil
   (key-chord-mode -1))
 
 ;; helm
@@ -72,12 +72,17 @@
 
 ;; java
 ;; (load "java")
+;; (require 'eclim)
+;; (global-eclim-mode)
 
 ;; haskell
 (setq haskell-font-lock-symbols -1)
 
 ;; kite
 ;; (load "kite")
+
+;; promela
+;; (require 'promela-mode)
 
 ;; lisp
 ;; (load (expand-file-name "~/quicklisp/slime-helper.el"))
@@ -95,12 +100,12 @@
 
 
 ;; latex
-(add-hook 'LaTeX-mode-hook
-          (lambda ()
-            (TeX-PDF-mode)
-            (reftex-mode)
-            (smartparens-mode)
-            (setq whitespace-style (delete 'lines-tail whitespace-style))))
+;; (add-hook 'LaTeX-mode-hook
+;;          (lambda ()
+;;            (TeX-latex-mode)
+;;            ;; (reftex-mode)
+;;            (smartparens-mode)
+;;            (setq whitespace-style (delete 'lines-tail whitespace-style))))
 
 ;; markdown
 (require 'markdown-mode)
