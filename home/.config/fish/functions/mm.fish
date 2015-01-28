@@ -12,7 +12,7 @@ function mm -d "Quickly setup multiple monitors"
       return
 
     case reset re
-      xrandr --output $stock --auto
+      # xrandr --output $stock --auto
       xrandr -s 0
       return
 
