@@ -37,9 +37,12 @@
 ;; (key-chord-define-global (kbd "jk") nil)
 
 ;; auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode t)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+;; (global-auto-complete-mode t)
+
+;; company-mode
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; yaline
 (global-yalinum-mode t)
