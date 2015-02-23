@@ -27,6 +27,8 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-x C-n") 'prelude-create-scratch-buffer)
 
+(define-key my-keys-minor-mode-map (kbd "M-p") 'ace-window)
+
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
