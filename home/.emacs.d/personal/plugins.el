@@ -72,6 +72,10 @@
 ;; c
 (setq c-default-style "linux"
       c-basic-offset 4)
+(setq c-mode-hook
+      '(lambda ()
+         (gtags-mode 1)
+         ))
 
 ;; java
 ;; (load "java")
