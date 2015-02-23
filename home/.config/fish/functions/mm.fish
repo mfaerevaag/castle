@@ -43,6 +43,12 @@ function mm -d "Quickly setup multiple monitors"
       --output HDMI-1 --mode 1920x1200 --pos 1920x0   --rotate normal
       return
 
+    # custom single
+    case s
+      xrandr --output HDMI-0 --mode 1920x1200 --pos 0x0 --rotate normal
+      # xrandr --output HDMI-0 --mode 1920x1200 --pos 0x0 --rotate normal
+      return
+
     case '*'
       echo "Error: Unkown option '$opt'"
       return 1
