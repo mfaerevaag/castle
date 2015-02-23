@@ -12,11 +12,10 @@
 ;; (mapc 'load (directory-files personal-plugins-dir 't "^[^#].*el$"))
 
 ;; evil
-(setq evil-shift-width 4)
-(setq evil-auto-indent t)
-;; disable key-chort-mode in evilmode
-(when 'personal-evil
-  (key-chord-mode -1))
+;; (setq evil-shift-width 4)
+;; (setq evil-auto-indent t)
+;; ;; disable key-chort-mode in evilmode
+;; (key-chord-mode -1)
 
 ;; helm
 (require 'prelude-helm-everywhere)
