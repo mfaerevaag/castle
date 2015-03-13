@@ -14,6 +14,7 @@ function mm -d "Quickly setup multiple monitors"
     case reset re
       # xrandr --output $stock --auto
       xrandr -s 0
+      xrandr --dpi 96 # fix font size
       return
 
     case right-of right r
