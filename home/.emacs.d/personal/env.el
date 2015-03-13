@@ -7,10 +7,10 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
-(setq default-directory "~/Dev/code/")
+(setq default-directory "~/dev/code/")
 
 ;; registers
-;; (set-register ?e (cons 'file "~/.emacs.d/personal/init.el"))
+(set-register ?e (cons 'file "~/.emacs.d/personal/init.el"))
 (set-register ?t (cons 'file "~/todo.org"))
 
 ;; platform specific
