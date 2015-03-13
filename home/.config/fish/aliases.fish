@@ -14,5 +14,5 @@ function p
 end
 
 function y
-  yaourt $argv
+  yaourt --noconfirm $argv
 end
