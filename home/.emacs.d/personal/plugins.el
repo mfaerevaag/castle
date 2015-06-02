@@ -28,6 +28,9 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 
+;; auto-fill
+(setq-default fill-column 80)
+
 ;; doc-view
 ;; (require 'doc-view)
 ;; (setq doc-view-continuous t)
@@ -38,10 +41,15 @@
 ;; auto-complete
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-;; (global-auto-complete-mode t)
+(global-auto-complete-mode t)
 
 ;; company-mode
-(add-hook 'after-init-hook 'global-company-mode)
+;; (add-hook 'after-init-hook 'global-company-mode)
+
+;; yasnippet
+(yas-global-mode 1)
+(add-to-list 'yas-snippet-dirs "~/.emacs.d/personal/snippets")
+(yas-reload-all)
 
 ;; yaline
 (global-yalinum-mode t)
@@ -71,10 +79,13 @@
 ;; c
 (setq c-default-style "linux"
       c-basic-offset 4)
-(setq c-mode-hook
-      '(lambda ()
-         (gtags-mode 1)
-         ))
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (auto-complete-mode -1)
+            (company-mode t)
+            (local-set-key (kbd "C-c o") 'ff-find-other-file)
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
 
 ;; java
 ;; (load "java")
@@ -131,6 +142,7 @@
 
 ;; typescript
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-hook 'typescript-mode-hook 'smartparens-mode)
 
 ;; coffee
 (add-hook 'coffee-mode-hook 'auto-complete-mode)

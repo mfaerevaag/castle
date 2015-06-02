@@ -12,7 +12,7 @@ function mm -d "Quickly setup multiple monitors"
       return
 
     case reset re
-      # xrandr --output $stock --auto
+      xrandr --output $stock --auto
       xrandr -s 0
       xrandr --dpi 96 # fix font size
       return
@@ -46,8 +46,7 @@ function mm -d "Quickly setup multiple monitors"
 
     # custom single
     case s
-      xrandr --output HDMI-0 --mode 1920x1200 --pos 0x0 --rotate normal
-      # xrandr --output HDMI-0 --mode 1920x1200 --pos 0x0 --rotate normal
+      xrandr --output eDP-0 --off --output HDMI-0 --auto
       return
 
     case '*'

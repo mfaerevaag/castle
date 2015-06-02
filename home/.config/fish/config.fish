@@ -3,6 +3,7 @@
 
 # variables
 set -U FISH (dirname (status -f))
+set -U EDITOR "em -nw"
 
 # theme
 source $FISH/themes/robby-russel.fish

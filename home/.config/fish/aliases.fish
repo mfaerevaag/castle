@@ -9,6 +9,10 @@ function sd
   sudo systemctl $argv
 end
 
+function sdu
+  systemctl --user $argv
+end
+
 function p
   sudo pacman $argv
 end
