@@ -1,11 +1,13 @@
-#!/bin/env sh
+#!/bin/env bash
 # sys info - temp
 
 readonly PREFIX="T: "
 
 main() {
-    local temp=$(cat /sys/bus/platform/devices/coretemp.0/temp1_input)
-    local s=${temp%???}
+    local temp=$(sensors | awk '/Physical id/ { print $4 }')
+    local s
+    s=${temp:1}
+    s=${s%????}
     local c
 
     if (( $s > 80 )); then

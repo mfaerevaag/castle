@@ -11,7 +11,7 @@ main() {
     local s
     local c
     if [[ "$state" == "off" ]]; then
-        s="M"
+        s="-"
         c=$YEL
     else
         s="${level}"

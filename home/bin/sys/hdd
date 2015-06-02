@@ -1,11 +1,13 @@
-#!/bin/env sh
+#!/bin/env bash
 # sys info - hdd
 
-readonly PREFIX="⛃: "
+readonly PREFIX="HD: "
 
 main() {
-    local hd=$(df | grep -Eo "([0-9]{,3}%) /$")
-    local s="${hd%???}"
+    local perc=$(df | awk '/\/dev\/sda2/ { print $5 }')
+    local used=$(df -h | awk '/\/dev\/sda2/ { print $3 }')
+    local total=$(df -h | awk '/\/dev\/sda2/ { print $2 }')
+    local s="${perc%?}"
 
     if (( $s > 75 )); then
         c=$RED
@@ -13,6 +15,6 @@ main() {
         c=$YEL
     fi
 
-    echo -e "${s}%"
+    echo -e "${s}% ${used}/${total}"
     echo -e "${c}"
 }
