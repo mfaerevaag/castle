@@ -1,0 +1,19 @@
+#!/bin/env sh
+# sys info - temp
+
+readonly PREFIX="T: "
+
+main() {
+    local temp=$(cat /sys/bus/platform/devices/coretemp.0/temp1_input)
+    local s=${temp%???}
+    local c
+
+    if (( $s > 80 )); then
+        c=$RED
+    elif (( $s > 60 )); then
+        c=$YEL
+    fi
+
+    echo -e "${s}°C"
+    echo -e "${c}"
+}

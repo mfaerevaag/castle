@@ -1,0 +1,18 @@
+#!/bin/env sh
+# sys info - hdd
+
+readonly PREFIX="⛃: "
+
+main() {
+    local hd=$(df | grep -Eo "([0-9]{,3}%) /$")
+    local s="${hd%???}"
+
+    if (( $s > 75 )); then
+        c=$RED
+    elif (( $s > 50 )); then
+        c=$YEL
+    fi
+
+    echo -e "${s}%"
+    echo -e "${c}"
+}

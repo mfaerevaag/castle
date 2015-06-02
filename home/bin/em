@@ -1,0 +1,10 @@
+#!/bin/sh
+# https://wiki.archlinux.org/index.php/Emacs#As_a_daemon
+
+ps aux | grep 'emacs *--daemon' || DISPLAY='' emacs --daemon -nw --no-splash
+
+if [ "x$1" = "x-nw" ]; then
+  exec emacsclient "$@"
+else
+  exec emacsclient -nc "$@"
+fi
