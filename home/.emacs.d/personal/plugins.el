@@ -71,6 +71,19 @@
 (load "personal-tramp")
 ;; (require 'personal-plugin-tramp)
 
+;; eshell
+(setq eshell-prompt-function
+      (lambda () (if (= (user-uid) 0) " # " " $ ")))
+(defun eshell-clear-buffer ()
+  "Clear terminal"
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (eshell-send-input)))
+(add-hook 'eshell-mode-hook
+          '(lambda()
+             (local-set-key (kbd "C-l") 'eshell-clear-buffer)))
+
 ;; r
 (add-to-list 'auto-mode-alist '("\\.R\\'" . R-mode))
 (add-hook 'R-mode-hook 'auto-complete-mode)
@@ -91,6 +104,15 @@
 ;; (load "java")
 ;; (require 'eclim)
 ;; (global-eclim-mode)
+
+;; java byte code
+(add-to-list 'auto-mode-alist '("\\.jbc\\'" . javap-mode))
+
+;; c#
+(add-to-list 'auto-mode-alist '("\\.cs\\'" . csharp-mode))
+
+;; cil
+(add-to-list 'auto-mode-alist '("\\.cil\\'" . cil-mode))
 
 ;; haskell
 (setq haskell-font-lock-symbols -1)

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: lecture
+# --
+:PROPERTIES:
+:title:    $0
+:lecturer: $0
+:date:     $0
+:END:
+*

@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
+(key-chord-define-global "kj" nil)
+
+(global-unset-key (kbd "C-c o"))
+
 (defvar my-keys-minor-mode-map (make-keymap) "Custom my-keys-minor-mode keymap.")
 
 ;; (when (not (boundp 'evil-mode))
@@ -29,6 +33,10 @@
 
 (define-key my-keys-minor-mode-map (kbd "M-p") 'ace-window)
 
+(define-key my-keys-minor-mode-map (kbd "C-v") 'View-scroll-half-page-forward)
+(define-key my-keys-minor-mode-map (kbd "M-v") 'View-scroll-half-page-backward)
+
+(define-key my-keys-minor-mode-map (kbd "C-c h g") 'helm-do-ag)
 
 (define-minor-mode my-keys-minor-mode
   "A minor mode so that my key settings override annoying major modes."
