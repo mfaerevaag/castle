@@ -34,12 +34,14 @@
 # [difftool]
 # 	prompt = false
 [gitflow "prefix"]
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
+	feature = feature/
+	release = release/
+	hotfix = hotfix/
+	support = support/
 	versiontag = v
 [alias]
+	cp = cherry-pick
+	#############
 	a = add
 	ai = add -i
 	au = add -u
