@@ -4,7 +4,7 @@
 # ~/.zshrc
 
 export DOT=$HOME/.config/zsh
-export CODE=$HOME/Dev/code
+export CODE=$HOME/dev/code
 
 # your project folder that we can `c [tab]` to
 c() { cd $CODE/$1; }
