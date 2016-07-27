@@ -1,7 +1,8 @@
 #!/bin/env bash
 # sys info - hdd
 
-readonly PREFIX="HD: "
+# readonly PREFIX="HD: "
+readonly PREFIX=""
 
 main() {
     local perc=$(df | awk '/\/dev\/sda2/ { print $5 }')

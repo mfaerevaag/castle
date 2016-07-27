@@ -1,7 +1,8 @@
 #!/bin/env bash
 # sys info - cpu
 
-readonly PREFIX="C: "
+# readonly PREFIX="C: "
+readonly PREFIX=""
 
 read cpu a b c previdle rest < /proc/stat
 prevtotal=$((a+b+c+previdle))

@@ -1,7 +1,8 @@
 #!/bin/env bash
 # sys info - wifi
 
-readonly PREFIX="⚶: "
+# readonly PREFIX="⚶: "
+readonly PREFIX=""
 
 main() {
     local iw=$(iwconfig)
@@ -15,7 +16,7 @@ main() {
     local c
 
     if [[ $essid == "" ]]; then
-        s="off/any"
+        s="-"
         c=$RED
     else
         s="${essid} ${qual}"

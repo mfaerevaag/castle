@@ -1,7 +1,8 @@
 #!/bin/env bash
 # sys info - temp
 
-readonly PREFIX="T: "
+# readonly PREFIX="T: "
+readonly PREFIX=""
 
 main() {
     local temp=$(sensors | awk '/Physical id/ { print $4 }')

@@ -1,7 +1,8 @@
 #!/bin/env bash
 # sys info - ram
 
-readonly PREFIX="R: "
+#readonly PREFIX="R: "
+readonly PREFIX=""
 
 main() {
     local total=$(free -m | awk '/Mem:/ { print $2 }')

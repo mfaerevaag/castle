@@ -1,7 +1,8 @@
 #!/bin/env sh
 # sys info - kbd
 
-readonly PREFIX="K: "
+# readonly PREFIX="K: "
+readonly PREFIX=""
 
 main() {
     local kbd
