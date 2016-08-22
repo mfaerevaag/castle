@@ -1,112 +1,52 @@
 servers = (
-  { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
-  { address = "irc.efnet.org"; chatnet = "EFNet"; port = "6667"; },
   {
-    address = "irc.undernet.org";
-    chatnet = "Undernet";
-    port = "6667";
+    address = "chat.freenode.net";
+    chatnet = "freenode";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_cert = "~/.keys/freenode.pem";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
+    autoconnect = "no";
   },
-  { address = "irc.dal.net"; chatnet = "DALnet"; port = "6667"; },
   {
-    address = "irc.quakenet.org";
-    chatnet = "QuakeNet";
-    port = "6667";
-  },
-  { address = "irc.oftc.net"; chatnet = "OFTC"; port = "6667"; },
-  {
-    address = "irc.gamesurge.net";
-    chatnet = "GameSurge";
-    port = "6667";
-  },
-  { address = "irc.webchat.org"; chatnet = "WebChat"; port = "6667"; },
-  { address = "irc.rizon.net"; chatnet = "Rizon"; port = "6667"; },
-  { address = "irc.link-net.org"; chatnet = "LinkNet"; port = "6667"; },
-  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
-  {
-    address = "irc.freenode.net";
-    chatnet = "fn";
-    port = "6667";
-    use_ssl = "no";
+    address = "irc.anonops.com";
+    chatnet = "anonops";
+    port = "6697";
+    use_ssl = "yes";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.mozilla.org";
+    chatnet = "mozilla";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "no";
   }
 );
 
 chatnets = {
-  IRCnet = {
+  freenode = {
     type = "IRC";
-    max_kicks = "4";
-    max_msgs = "5";
-    max_whois = "4";
-    max_query_chans = "5";
+    nick = "slevin";
+    # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
-  EFNet = {
+  anonops = {
     type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "1";
+    nick = "seven";
+    # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
-  Undernet = {
+  mozilla = {
     type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  DALnet = {
-    type = "IRC";
-    max_kicks = "4";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  QuakeNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  OFTC = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  GameSurge = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  WebChat = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  Rizon = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  LinkNet = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "3";
-    max_whois = "30";
-  };
-  SILC = { type = "SILC"; };
-  fn = {
-    type = "IRC";
-    nick = "markuss";
-    autosendcmd = "/msg NickServ IDENTIFY F2r2L.kjas.";
+    nick = "slevin";
+    # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#archlinux"; chatnet = "fn"; autojoin = "yes"; }
+  { name = "#archlinux"; chatnet = "fn"; autojoin = "No"; }
 );
 
 aliases = {
@@ -270,18 +210,18 @@ statusbar = {
     };
   };
 };
+
 settings = {
   core = {
-    real_name = "Unknown";
-    user_name = "markus";
-    nick = "markus";
+    real_name = "unknown";
+    user_name = "unknown";
+    nick = "unknown";
   };
-  "fe-text" = {
-    actlist_sort = "refnum";
-  };
+  "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
     theme = "themes/solarized";
     hilight_color = "= %R";
   };
 };
-ignores = ( { level = "JOINS PARTS QUITS"; } );
+
+ignores = ( { level = "JOINS PARTS QUITS CTCPS DCC"; } );
