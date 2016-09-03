@@ -35,7 +35,7 @@ chatnets = {
   };
   anonops = {
     type = "IRC";
-    nick = "seven";
+    nick = "";
     # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
   mozilla = {
