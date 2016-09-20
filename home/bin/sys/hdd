@@ -10,9 +10,9 @@ main() {
     local total=$(df -h | awk '/\/dev\/sda2/ { print $2 }')
     local s="${perc%?}"
 
-    if (( $s > 75 )); then
+    if (( $s > 95 )); then
         c=$RED
-    elif (( $s > 50 )); then
+    elif (( $s > 75 )); then
         c=$YEL
     fi
 
