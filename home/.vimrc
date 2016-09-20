@@ -5,7 +5,7 @@
 "------------------------------------------------------------
 " Pathogen
 "
-call pathogen#infect()
+" call pathogen#infect()
 
 
 "------------------------------------------------------------
@@ -174,12 +174,11 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 " Plugins
 
 " CtrlP
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|swm|dll)$',
-  \ }
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"   \ 'file': '\v\.(exe|swm|dll)$',
+"   \ }
 
 " Powerline
 " python from powerline.bindings.vim import source_plugin; source_plugin()
-source /usr/lib/python3.4/site-packages/powerline/bindings/vim/plugin/powerline.vim
-
+" source /usr/lib/python3.4/site-packages/powerline/bindings/vim/plugin/powerline.vim

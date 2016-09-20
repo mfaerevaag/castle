@@ -1,6 +1,7 @@
 [user]
 	name = Markus Faerevaag
 	email = m@frv.ag
+	signingkey = D2F12E29
 [github]
 	user = mfaerevaag
 	token = token

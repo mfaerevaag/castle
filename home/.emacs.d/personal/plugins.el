@@ -100,6 +100,14 @@
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
               (ggtags-mode 1))))
 
+;; gud
+;; TODO
+;; (eval-after-load "gud-minor-mode"
+;;   '(define-key my-keys-minor-mode-map (kbd "M-p") nil))
+;; (add-hook 'gud-minor-mode-hook
+;;           (lambda ()
+;;             (local-set-key (kbd "M-p") nil)))
+
 ;; java
 ;; (load "java")
 ;; (require 'eclim)
@@ -148,7 +156,8 @@
 
 ;; markdown
 (require 'markdown-mode)
-(setq markdown-command "markdown_py2")
+(setq markdown-open-command "markdown_py2")
+(add-hook 'markdown-mode-hook 'smartparens-mode)
 (add-hook 'markdown-mode-hook
           (lambda ()
             (setq prelude-clean-whitespace-on-save nil)
@@ -185,6 +194,13 @@
 ;; simplezen
 (require 'simplezen)
 (define-key web-mode-map (kbd "C-c C-z") 'simplezen-expand)
+
+;; python
+(require 'python)
+(define-key python-mode-map (kbd "C-c C-c")
+  (lambda () (interactive) (python-shell-send-buffer t)))
+(setq python-python-command "/usr/bin/python2")
+(setq python-shell-interpreter "/usr/bin/python2")
 
 
 (provide 'personal-plugins)

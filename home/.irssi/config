@@ -10,6 +10,14 @@ servers = (
     autoconnect = "no";
   },
   {
+    address = "irc.smashthestack.org";
+    chatnet = "sts";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
     address = "irc.anonops.com";
     chatnet = "anonops";
     port = "6697";
@@ -33,9 +41,14 @@ chatnets = {
     nick = "slevin";
     # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
+  sts = {
+    type = "IRC";
+    nick = "slevin";
+    autosendcmd = "/msg nickserv identify S2m2L.kjas.; wait 2000";
+  };
   anonops = {
     type = "IRC";
-    nick = "";
+    nick = "seven";
     # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
   mozilla = {
@@ -215,7 +228,7 @@ settings = {
   core = {
     real_name = "unknown";
     user_name = "unknown";
-    nick = "unknown";
+    nick = "slevin";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {

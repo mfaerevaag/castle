@@ -1,27 +1,28 @@
 # .dotfile
 # functions/wd.zsh
 
-fpath=(~/Dev/code/shell/wd $fpath)
+# WD_PATH=$CODE/shell/wd
 
-wd() {
-    . ~/Dev/code/shell/wd/wd.sh
-}
-
+# fpath=($WD_PATH $fpath)
 
 # wd() {
-#     output=$(_wd $@)
-#     ret=$?
-
-#     if [[ "$output" != "" ]]
-#     then
-#         if [[ $ret -eq 0  ]]
-#         then
-#             cd "$output"
-#         else
-#             echo "$output"
-#         fi
-#     fi
-
-#     unset output
-#     unset ret
+#     . $WD_PATH/wd.sh
 # }
+
+wd() {
+    output=$(_wd $@)
+    ret=$?
+
+    if [[ $ret -eq 0  ]]
+    then
+        cd "$output"
+    else
+        if [[ "$output" != "" ]]
+        then
+            echo "$output"
+        fi
+    fi
+
+    unset output
+    unset ret
+}

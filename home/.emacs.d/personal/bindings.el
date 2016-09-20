@@ -31,7 +31,7 @@
 
 (define-key my-keys-minor-mode-map (kbd "C-x C-n") 'prelude-create-scratch-buffer)
 
-(define-key my-keys-minor-mode-map (kbd "M-p") 'ace-window)
+;; (define-key my-keys-minor-mode-map (kbd "M-p") 'ace-window)
 
 (define-key my-keys-minor-mode-map (kbd "C-v") 'View-scroll-half-page-forward)
 (define-key my-keys-minor-mode-map (kbd "M-v") 'View-scroll-half-page-backward)
