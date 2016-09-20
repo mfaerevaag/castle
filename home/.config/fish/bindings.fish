@@ -1,6 +1,12 @@
 # .dotfile
 # fish - bindings
 
+function _bind_clear -d "clear and greet"
+  clear
+  fish_greeting
+  commandline -f repaint
+end
+
 function _bind_git_status -d "git status"
   echo ''
   if git status > /dev/null ^ /dev/null
@@ -43,4 +49,5 @@ function fish_user_key_bindings
   bind \eg _bind_ag # ag
   bind \et _bind_new_window # term
   bind \ek _bind_git_status # git status
+  bind \cl _bind_clear
 end

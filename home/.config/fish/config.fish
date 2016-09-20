@@ -3,11 +3,13 @@
 
 # variables
 set -U FISH (dirname (status -f))
-# set -x EDITOR "em -nw"
-set -x EDITOR "vim"
-set -x VISUAL "vim"
-set -x BROWSER "chrome"
+set -x EDITOR "em -nw"
+set -x BROWSER "firefox"
 set -x DESKTOP_SESSION "i3"
+
+set -x LC_ALL "en_US.UTF-8"
+set -x LANG "en_US.UTF-8"
+set -x LANGUAGE "en_US.UTF-8"
 
 # theme
 source $FISH/themes/robby-russel.fish
