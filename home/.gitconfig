@@ -11,7 +11,7 @@
 	excludesfile = ~/.gitignore
 	pager = less -r
 [web]
-	browser = dwb
+	browser = firefox
 [push]
 	default = matching
 [color]
