@@ -1,10 +1,10 @@
 servers = (
   {
     address = "chat.freenode.net";
-    chatnet = "freenode";
+    chatnet = "fn";
     port = "7000";
     use_ssl = "yes";
-    ssl_cert = "~/.keys/freenode.pem";
+    ssl_cert = "~/.keys/irc/freenode.pem";
     ssl_verify = "yes";
     ssl_capath = "/etc/ssl/certs";
     autoconnect = "no";
