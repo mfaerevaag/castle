@@ -20,3 +20,7 @@ end
 function y
   yaourt --noconfirm $argv
 end
+
+function cb
+    command xclip -selection c
+end
