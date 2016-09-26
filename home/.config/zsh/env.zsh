@@ -12,13 +12,16 @@ then
 # Linux
 else
     export TERM=rxvt-unicode-256color
-    export BROWSER=chromium
-    export EDITOR=vim #e
+
+    export EDITOR="emc"
+    export BROWSER="firefox"
+    export DESKTOP_SESSION="i3"
+
+    # locale
+    export LC_ALL="en_US.UTF-8"
+    export LANG="en_US.UTF-8"
+    export LANGUAGE="en_US.UTF-8"
 
     # compilation flags
     export ARCHFLAGS="-arch x86_64"
-
-    # ssh
-    export SSH_PRIVATE_KEY_PATH="~/.ssh/id_rsa"
-    export SSH_PUBLIC_KEY_PATH="~/.ssh/id_rsa.pub"
 fi
