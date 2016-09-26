@@ -22,6 +22,8 @@ else
     export LANG="en_US.UTF-8"
     export LANGUAGE="en_US.UTF-8"
 
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
     # compilation flags
     export ARCHFLAGS="-arch x86_64"
 fi
