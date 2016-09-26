@@ -6,7 +6,7 @@
 	user = mfaerevaag
 	token = token
 [core]
-	editor = vim
+	editor = emc
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
 	pager = less -r

@@ -3,7 +3,7 @@
 
 # variables
 set -U FISH (dirname (status -f))
-set -x EDITOR "em -nw"
+set -x EDITOR "emc"
 set -x BROWSER "firefox"
 set -x DESKTOP_SESSION "i3"
 
