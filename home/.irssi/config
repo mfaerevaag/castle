@@ -18,14 +18,6 @@ servers = (
     autoconnect = "no";
   },
   {
-    address = "irc.anonops.com";
-    chatnet = "anonops";
-    port = "6697";
-    use_ssl = "yes";
-    ssl_verify = "no";
-    autoconnect = "no";
-  },
-  {
     address = "irc.mozilla.org";
     chatnet = "mozilla";
     port = "6697";
@@ -36,7 +28,7 @@ servers = (
 );
 
 chatnets = {
-  freenode = {
+  fn = {
     type = "IRC";
     nick = "slevin";
     # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
@@ -45,11 +37,6 @@ chatnets = {
     type = "IRC";
     nick = "slevin";
     autosendcmd = "/msg nickserv identify S2m2L.kjas.; wait 2000";
-  };
-  anonops = {
-    type = "IRC";
-    nick = "seven";
-    # autosendcmd = "/msg nickserv identify YOURPASSWORD; wait 2000";
   };
   mozilla = {
     type = "IRC";
